@@ -103,7 +103,6 @@ struct MenuView: View {
                     image: .minMax(minSystemName: "sun.min.fill", maxSystemName: "sun.max.fill")
                 )
                 .disabled(!isEnabled)
-                .frame(minWidth: sliderWidth)
                 
                 HStack {
                     MenuCircleToggle(
@@ -144,7 +143,6 @@ struct MenuView: View {
             
             MenuSection("Sound", divider: true) {
                 MenuVolumeSlider(value: $volume)
-                    .frame(minWidth: sliderWidth)
                 
                 MenuCommand("Sound Settings...") {
                     print("Sound Settings clicked")
